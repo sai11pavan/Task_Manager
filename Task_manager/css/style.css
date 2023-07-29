@@ -1,0 +1,176 @@
+/* google fonts  */
+@import url("https://fonts.googleapis.com/css2?family=Sora&display=swap");
+
+/* global variables */
+:root {
+  --main-color: #ffc600;
+  --box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.2);
+  --fonts: "" Sora ", sans-serif";
+}
+/* global variables ends */
+
+/* common styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-color: var(--main-color);
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* common style ends */
+
+/* container */
+.container {
+  /* min-width: 700px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 3rem;
+  font-family: "Sora", sans-serif;
+}
+
+/* todo-form */
+
+.todo-form {
+  margin: 40px 0px;
+  display: flex;
+  justify-content: center;
+}
+
+.todo-input {
+  font-family: "Sora", sans-serif;
+  width: 250px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin-right: 10px;
+  font-size: 1rem;
+  box-shadow: var(--box-shadow);
+}
+
+.add-button {
+  width: 41px;
+  line-height: 25px;
+  background: linear-gradient(#2f6097, #54abfd);
+  border: 1px solid #4a9efd;
+  color: #fff;
+  border-radius: 5px;
+  padding: 7px;
+  font-size: 1.2rem;
+  box-shadow: var(--box-shadow);
+}
+
+/* todo-form style ends */
+
+/* todo-items */
+.todo-items {
+  min-width: 350px;
+  box-shadow: var(--box-shadow);
+  border-radius: 7px;
+}
+
+/* each li with class="item" */
+.item {
+  background-color: #fff;
+  font-size: 1.1rem;
+  border-bottom: 1px solid #f4f4f4;
+  display: flex;
+  overflow: hidden;
+}
+
+.item:first-child {
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+}
+
+.item:last-child {
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  border-bottom: none;
+}
+
+/* item style end */
+
+.checkbox {
+  margin: 1rem;
+}
+
+.item-name {
+  width: 100%;
+  padding: 0 10px;
+  border-right: 1px solid #d5e4ff;
+  border-left: 1px solid #d5e4ff;
+  line-height: 45px;
+}
+
+.delete-button {
+  border: none;
+  padding: 0.5em;
+  display: flex;
+  align-items: center;
+  background: #fff;
+}
+
+.delete-icon {
+  height: 25px;
+  width: 25px;
+}
+
+/* applied when the todo item is checked */
+.checked {
+  text-decoration: line-through;
+}
+
+.checked .item-name {
+  background-color: #f9f9f9;
+}
+
+/* todo-items style ends */
+
+/* container style ends */
+
+/* Snackbar */
+
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: rgba(51, 51, 51, 0.6);
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-family: "Sora", sans-serif;
+}
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Snackbar styles ends  */
